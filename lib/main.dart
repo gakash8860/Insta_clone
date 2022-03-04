@@ -5,7 +5,6 @@ import 'package:insta_clone/responsive/mobile_screen_layout.dart';
 import 'package:insta_clone/responsive/responsive_layout_screen.dart';
 import 'package:insta_clone/responsive/webscreen_layout.dart';
 import 'package:insta_clone/screens/login_screen.dart';
-import 'package:insta_clone/screens/signupscreen.dart';
 import 'package:insta_clone/utils/color.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';

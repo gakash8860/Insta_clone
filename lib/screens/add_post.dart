@@ -110,7 +110,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
                       height: 75,
                       width: MediaQuery.of(context).size.width * 0.4,
                       child: TextField(
-                        style: TextStyle(color: Colors.white),
+                        style: const TextStyle(color: Colors.white),
                         controller: descriptionController,
                         decoration: const InputDecoration(
                           helperText: "Write a Caption",

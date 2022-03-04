@@ -1,9 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:insta_clone/responsive/mobile_screen_layout.dart';
-import 'package:insta_clone/responsive/responsive_layout_screen.dart';
-import 'package:insta_clone/responsive/webscreen_layout.dart';
 import 'package:insta_clone/utils/color.dart';
 
 import '../widgets/postcard.dart';

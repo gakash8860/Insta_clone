@@ -1,12 +1,8 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:insta_clone/provider/userprovider.dart';
 import 'package:insta_clone/utils/color.dart';
 import 'package:insta_clone/utils/global.dart';
-import 'package:provider/provider.dart';
-import 'package:insta_clone/models/user.dart' as model;
 
 class MobileScreenLayout extends StatefulWidget {
   const MobileScreenLayout({Key? key}) : super(key: key);
@@ -20,14 +16,14 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
   PageController pageController = PageController();
   @override
   void initState() {
-    // TODO: implement initState
+    
     super.initState();
     pageController = PageController();
   }
 
   @override
   void dispose() {
-    // TODO: implement dispose
+    
     super.dispose();
     pageController.dispose();
   }
@@ -89,7 +85,9 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
 
   void navigationTapped(int page) {
    pageController.jumpToPage(page);
-    print(_page);
+    if (kDebugMode) {
+      print(_page);
+    }
   }
    void onPageChanged(int page) {
     setState(() {

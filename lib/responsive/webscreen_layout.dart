@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -13,7 +14,7 @@ class _WebScreenLayoutState extends State<WebScreenLayout> {
   String userName = "";
   @override
   void initState() {
-    // TODO: implement initState
+   
     super.initState();
     getUserName();
   }
@@ -30,7 +31,9 @@ class _WebScreenLayoutState extends State<WebScreenLayout> {
         .collection('users')
         .doc(FirebaseAuth.instance.currentUser!.uid)
         .get();
-    print(snap.data());
+    if (kDebugMode) {
+      print(snap.data());
+    }
     setState(() {
       userName = (snap.data() as Map<String,dynamic>  )['username'];
     });

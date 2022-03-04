@@ -1,8 +1,9 @@
-import 'package:firebase_auth/firebase_auth.dart';
+// ignore_for_file: prefer_typing_uninitialized_variables
+
 import 'package:flutter/material.dart';
-import 'package:insta_clone/models/user.dart';
 import 'package:insta_clone/provider/userprovider.dart';
 import 'package:insta_clone/resources/firestore_method.dart';
+import 'package:insta_clone/screens/commentsscreen.dart';
 import 'package:insta_clone/utils/color.dart';
 import 'package:insta_clone/widgets/likeanimation.dart';
 import 'package:intl/intl.dart';
@@ -128,7 +129,7 @@ class _PostCardState extends State<PostCard> {
           Row(
             children: [
               LikeAnimation(
-                isAnimating: widget.snap['likes'].contains(user!.uid),
+                isAnimating: widget.snap['likes'].contains(user.uid),
                 smallLike: true,
                 child: IconButton(
                     onPressed: () {},
@@ -138,7 +139,7 @@ class _PostCardState extends State<PostCard> {
                     )),
               ),
               IconButton(
-                  onPressed: () {},
+                  onPressed: () =>Navigator.of(context).push(MaterialPageRoute(builder: (context)=>const CommentsScreen())),
                   icon: const Icon(
                     Icons.comment_outlined,
                   )),
@@ -190,7 +191,7 @@ class _PostCardState extends State<PostCard> {
                                   const TextStyle(fontWeight: FontWeight.bold)),
                           TextSpan(
                               text: '  ${widget.snap['description']}',
-                              style: TextStyle(fontWeight: FontWeight.bold)),
+                              style: const TextStyle(fontWeight: FontWeight.bold)),
                         ]),
                   ),
                 ),

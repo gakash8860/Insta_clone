@@ -24,7 +24,7 @@ class _LikeAnimationState extends State<LikeAnimation>
  late Animation<double> scale;
   @override
   void initState() {
-    // TODO: implement initState
+   
     super.initState();
     controller = AnimationController(
         vsync: this,
@@ -34,7 +34,7 @@ class _LikeAnimationState extends State<LikeAnimation>
 
   @override
   void didUpdateWidget(covariant LikeAnimation oldWidget) {
-    // TODO: implement didUpdateWidget
+    
     super.didUpdateWidget(oldWidget);
     if (widget.isAnimating != oldWidget.isAnimating) {
       startAnimation();
@@ -53,7 +53,7 @@ class _LikeAnimationState extends State<LikeAnimation>
 
   @override
   void dispose() {
-    // TODO: implement dispose
+   
     super.dispose();
     controller!.dispose();
   }
