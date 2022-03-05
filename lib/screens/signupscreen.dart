@@ -57,6 +57,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
             const SizedBox(
               height: 64,
             ),
+            Stack(children: [
+              CircleAvatar(
+                radius: 64,
+                backgroundImage: NetworkImage('https://lh3.googleusercontent.com/s7PTGMeASAukHub6Cuqdm5UpLGHc0VcPxjIW6GgymTeRcIVNsg9y974o3RqV9G-dgRTnTvPKMPby2maUgbMYGe4B5L95k3swOWaU12Un4hHbVukBDfJBarrCKN4zXfQswwZLTK4UXS--ZKJ1Acrr9XXfctqk_5XbSP1GbYalWjtP9LeJj7j_Qjd4cMm2y_FJe5g6xZjhPamU9SZutn_fRuBGWgcXdldkYmXXnaC0l49Ob_R2hWq9yRWjYgu1UtzPoAG9yZRnWHBwtgjXwELOfDk2_NPd1BwYOKedcJmL_kLlLHIkbIvJoMWhHoqfpSfZeQm6w9vjefy2q6MzGV1CvTBv7mvZG9BzuAjI_GwzrtlkGx0dqDy8eZZpZbfrGa37DelPeIwIx5JRxTC_50HRgOYUVB79021eFGgWRzeO7-DOKtHot09dDRY1DpUifJ-ryCX1IupTUi59rXIn4g0X2U3KqJO-sTlWOUYsuA5S2kdS5Q3ZkFdhBIAJaZDq5y6gnXS35iodVzBIZUZK9Jf9U2OzkiB_D7peKG_-tVsVEfvOeRgEdDjtZj0phmRYQp2SrK9RKpHtM02SGGJ1L2pYA_rDu8mHw_IwbGqk8B3wbwI4KkMUMdyLGiyzPehiHWX2HWEfS6UeUBcvyV-HdBa_lM5PYLX6VRXhILDJZj_AvORfxEcPKspTOXtRpLNu-hAPsNlfz89iUqNTFFiR98AFL3NN=s895-no?authuser=0'),
+              )
+            ],),
             //username
             TextFieldInput(
                 hintText: "Enter your username",

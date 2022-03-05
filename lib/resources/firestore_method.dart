@@ -37,11 +37,11 @@ class FireStoreMethods {
   Future<void> likePost(String postId, String uId, List likes) async {
     try {
       if (likes.contains(uId)) {
-       await  _fireStore.collection('posts').doc(postId).update({
+        await _fireStore.collection('posts').doc(postId).update({
           'likes': FieldValue.arrayRemove([uId])
         });
       } else {
-      await  _fireStore.collection("posts").doc(postId).update({
+        await _fireStore.collection("posts").doc(postId).update({
           'likes': FieldValue.arrayUnion([uId]),
         });
       }
@@ -49,6 +49,30 @@ class FireStoreMethods {
       if (kDebugMode) {
         print(e.toString());
       }
+    }
+  }
+
+  Future<void> postComment(String postId, String text, String uid, String name,
+      String profilePic) async {
+    try {
+      if (text.isNotEmpty) {
+        String commentId = const Uuid().v1();
+        await _fireStore
+            .collection('posts')
+            .doc(postId)
+            .collection('comments')
+            .doc(commentId)
+            .set({
+          'profilePic': profilePic,
+          'name': name,
+          'uid': uid,
+          'text': text,
+        });
+        print("ffddf");
+      }
+              print("empty");
+    } catch (e) {
+      print(e.toString());
     }
   }
 }
