@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:insta_clone/resources/auth_method.dart';
-import 'package:insta_clone/screens/signupscreen.dart';
+import '../resources/auth_method.dart';
+import '../screens/signupscreen.dart';
 
-import 'package:insta_clone/utils/color.dart';
-import 'package:insta_clone/widgets/text_field_input.dart';
+import '../utils/color.dart';
+import '../widgets/text_field_input.dart';
 
 import '../responsive/mobile_screen_layout.dart';
 import '../responsive/responsive_layout_screen.dart';
